@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "crc32defs.h"
 #include <inttypes.h>
-#include "autoconfig.h"
+
 #define ENTRIES_PER_LINE 4
 
 #define LE_TABLE_SIZE (1 << CRC_LE_BITS)
