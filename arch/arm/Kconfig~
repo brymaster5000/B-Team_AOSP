@@ -144,9 +144,12 @@ config RWSEM_GENERIC_SPINLOCK
 	bool
 
 config RWSEM_XCHGADD_ALGORITHM
+<<<<<<< HEAD
 	def_bool y
+=======
 	bool
 	default y
+>>>>>>> fe75adf... Optimized ARM RWSEM algorithm
 
 config ARCH_HAS_ILOG2_U32
 	bool
