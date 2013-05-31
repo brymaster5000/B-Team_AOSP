@@ -446,6 +446,7 @@ obj-$(CONFIG_MACH_VIVOW_CT)+= board-vivow-mmc.o board-vivow-wifi.o
 obj-$(CONFIG_MACH_VIVOW_CT) += display/vivow-panel.o board-vivow-audio.o
 obj-$(CONFIG_MACH_VIVOW_CT) += htc_sleep_clk.o htc_fast_clk_7k.o
 obj-$(CONFIG_MACH_VIVOW_CT) += htc_bdaddress.o board-vivow-rfkill.o
+obj-$(CONFIG_FORCE_FAST_CHARGE) += fastchg.o
 obj-$(CONFIG_MACH_BLISSC) += board-blissc.o board-blissc-wifi.o
 obj-$(CONFIG_MACH_BLISSC) += board-blissc-keypad.o
 obj-$(CONFIG_MACH_BLISSC) += display/blissc-panel.o board-blissc-audio.o
