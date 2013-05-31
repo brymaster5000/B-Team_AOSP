@@ -3,6 +3,7 @@ cmd_fs/sync.o := /home/brymaster5000/android/kernel/B-Team_AOSP/scripts/gcc-wrap
 source_fs/sync.o := fs/sync.c
 
 deps_fs/sync.o := \
+    $(wildcard include/config/dynamic/fsync.h) \
     $(wildcard include/config/have/syscall/wrappers.h) \
   include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \
