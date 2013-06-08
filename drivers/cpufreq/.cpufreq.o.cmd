@@ -5,6 +5,7 @@ source_drivers/cpufreq/cpufreq.o := drivers/cpufreq/cpufreq.c
 deps_drivers/cpufreq/cpufreq.o := \
     $(wildcard include/config/hotplug/cpu.h) \
     $(wildcard include/config/smp.h) \
+    $(wildcard include/config/cpu/freq/vdd/levels.h) \
     $(wildcard include/config/vdd/sysfs/interface.h) \
     $(wildcard include/config/cpu/freq/gov/performance.h) \
   include/linux/kernel.h \
