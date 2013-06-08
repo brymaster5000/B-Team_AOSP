@@ -289,7 +289,6 @@ static int input_get_disposition(struct input_dev *dev,
           {
         powerkey_press();
           } 
-#endif 
 
 			if (value != 2) {
 				__change_bit(code, dev->key);

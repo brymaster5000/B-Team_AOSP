@@ -1589,26 +1589,14 @@ config MSM_CPU_FREQ_ONDEMAND_MIN
         int "Min"
         default 245760
 
-<<<<<<< HEAD
 endif # PERFLOCK
 
-=======
->>>>>>> a6ef815... added OC and governers
 config ACPUCLOCK_OVERCLOCKING
 	bool "Enable support for CPU overclocking"
 	default n
 	depends on CPU_FREQ && !PERFLOCK
 	depends on ARCH_MSM7X30
 
-<<<<<<< HEAD
-config JESUS_PHONE
-	bool "Enable up to 1.8Ghz speeds"
-	default n
-	depends on ACPUCLOCK_OVERCLOCKING
-	depends on ARCH_MSM7X30
-
-=======
->>>>>>> a6ef815... added OC and governers
 config MSM_CPU_AVS
 	bool "Enable software controlled Adaptive Voltage Scaling (AVS)"
 	depends on (ARCH_MSM_SCORPION && QSD_SVS)
@@ -2217,6 +2205,13 @@ config SUPPORT_DQ_BATTERY
 	help
 		support DQ battery.
 
+config FORCE_FAST_CHARGE
+        bool "Force AC charge mode at will"
+        default y
+        help
+          A simple sysfs interface to force adapters that
+          are detected as USB to charge as AC.
+
 config MSM_FAKE_BATTERY
 		depends on POWER_SUPPLY
 		default n
@@ -2347,7 +2342,14 @@ config REMOVE_EBI1_FIXED_CLK
 	default n
 	help
 		use for 2x Radio
-
+		
+config ROM_TYPE
+	bool "SYSFS interface to set misc parameters"
+	default y
+	help
+		A simple sysfs interface to define rom type
+		ex: sense vs aosp
+		
 config HTC_ACCESSORY_ONEWIRE
         tristate "HTC accessory one wire protocol driver"
         default n

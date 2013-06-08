@@ -1591,6 +1591,12 @@ config MSM_CPU_FREQ_ONDEMAND_MIN
 
 endif # PERFLOCK
 
+config CMDLINE_OPTIONS
+  bool "Enable cmdline options command parsing"
+  default n
+  help
+     This enables the parsing of cmdline options.
+
 config ACPUCLOCK_OVERCLOCKING
 	bool "Enable support for CPU overclocking"
 	default n
