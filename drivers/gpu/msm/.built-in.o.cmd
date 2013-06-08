@@ -1,0 +1,1 @@
+cmd_drivers/gpu/msm/built-in.o :=  /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/gpu/msm/built-in.o drivers/gpu/msm/msm_kgsl_core.o drivers/gpu/msm/msm_adreno.o drivers/gpu/msm/msm_z180.o 

@@ -1,1 +1,1 @@
-#define UTS_RELEASE "3.0.80-BSquad"
+#define UTS_RELEASE "3.0.80-evervolv"

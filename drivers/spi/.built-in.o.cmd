@@ -1,0 +1,1 @@
+cmd_drivers/spi/built-in.o :=  /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/spi/built-in.o drivers/spi/spi.o drivers/spi/spi_qsd.o drivers/spi/spi_aic3254.o 
