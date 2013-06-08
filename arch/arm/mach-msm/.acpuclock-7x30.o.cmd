@@ -129,6 +129,7 @@ deps_arch/arm/mach-msm/acpuclock-7x30.o := \
     $(wildcard include/config/cpu/freq/default/gov/scary.h) \
     $(wildcard include/config/cpu/freq/default/gov/savagedzen.h) \
     $(wildcard include/config/cpu/freq/default/gov/smartass2.h) \
+    $(wildcard include/config/cpu/freq/default/gov/smartmax.h) \
   include/linux/mutex.h \
     $(wildcard include/config/debug/mutexes.h) \
     $(wildcard include/config/debug/lock/alloc.h) \

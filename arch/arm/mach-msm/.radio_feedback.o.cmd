@@ -573,6 +573,7 @@ deps_arch/arm/mach-msm/radio_feedback.o := \
     $(wildcard include/config/cpu/freq/default/gov/scary.h) \
     $(wildcard include/config/cpu/freq/default/gov/savagedzen.h) \
     $(wildcard include/config/cpu/freq/default/gov/smartass2.h) \
+    $(wildcard include/config/cpu/freq/default/gov/smartmax.h) \
   include/linux/uaccess.h \
   /home/brymaster5000/android/kernel/B-Team_AOSP/arch/arm/include/asm/uaccess.h \
   /home/brymaster5000/android/kernel/B-Team_AOSP/arch/arm/include/asm/unified.h \

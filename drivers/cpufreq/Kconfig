@@ -156,6 +156,8 @@ config CPU_FREQ_GOV_SMARTASS2
   	help
   	  'smartassV2' - a "smart" optimized governor for the hero!
 
+	  If in doubt, say N.
+
 config CPU_FREQ_GOV_PERFORMANCE
 	tristate "'performance' governor"
 	help

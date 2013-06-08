@@ -361,6 +361,7 @@ deps_drivers/cpufreq/cpufreq_interactive.o := \
     $(wildcard include/config/cpu/freq/default/gov/scary.h) \
     $(wildcard include/config/cpu/freq/default/gov/savagedzen.h) \
     $(wildcard include/config/cpu/freq/default/gov/smartass2.h) \
+    $(wildcard include/config/cpu/freq/default/gov/smartmax.h) \
   include/linux/device.h \
     $(wildcard include/config/debug/devres.h) \
     $(wildcard include/config/devtmpfs.h) \

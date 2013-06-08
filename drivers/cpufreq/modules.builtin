@@ -9,4 +9,5 @@ kernel/drivers/cpufreq/cpufreq_interactive.ko
 kernel/drivers/cpufreq/cpufreq_smartass2.ko
 kernel/drivers/cpufreq/cpufreq_scary.ko
 kernel/drivers/cpufreq/cpufreq_savagedzen.ko
+kernel/drivers/cpufreq/cpufreq_smartmax.ko
 kernel/drivers/cpufreq/freq_table.ko
