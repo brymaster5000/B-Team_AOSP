@@ -58,7 +58,7 @@
 
 #ifdef CONFIG_CPU_FREQ_VDD_LEVELS
 #define SEMC_ACPU_MIN_UV_MV 750U
-#define SEMC_ACPU_MAX_UV_MV 1450U
+#define SEMC_ACPU_MAX_UV_MV 1525U
 #endif
 
 struct clock_state {

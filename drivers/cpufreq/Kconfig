@@ -121,16 +121,7 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVE
 	  Use the CPUFreq governor 'interactive' as default. This allows
 	  you to get a full dynamic cpu frequency capable system by simply
 	  loading your cpufreq low-level hardware driver, using the
-	  'interactive' governor for latency-sensitive workloads.
-
-config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND
-	bool "intellidemand"
-	select CPU_FREQ_GOV_INTELLIDEMAND
-	select CPU_FREQ_GOV_PERFORMANCE
-	help
-	  Intelligent OnDemand Govneror based on Samsung Patched OnDemand
-
-
+	  'interactive' governor for latency-sensitive workloads
 
 config CPU_FREQ_DEFAULT_GOV_SMARTASS2
 	bool "smartass2"
@@ -317,5 +308,13 @@ config VDD_SYSFS_INTERFACE
 	default n
 	help
 	  Creates a sysfs interface for VDD entries
+
+config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND
+	bool "intellidemand"
+	select CPU_FREQ_GOV_INTELLIDEMAND
+	select CPU_FREQ_GOV_PERFORMANCE
+	help
+	  Intelligent OnDemand Govneror based on Samsung Patched OnDemand
+
 endif
 endmenu
