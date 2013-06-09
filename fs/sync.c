@@ -25,6 +25,10 @@ extern bool early_suspend_active;
 #define VALID_FLAGS (SYNC_FILE_RANGE_WAIT_BEFORE|SYNC_FILE_RANGE_WRITE| \
 			SYNC_FILE_RANGE_WAIT_AFTER)
 
+#ifdef CONFIG_DYNAMIC_FSYNC
+extern bool early_suspend_active;
+#endif
+
 /*
  * Do the filesystem syncing work. For simple filesystems
  * writeback_inodes_sb(sb) just dirties buffers with inodes so we have to
@@ -170,11 +174,10 @@ SYSCALL_DEFINE1(syncfs, int, fd)
 int vfs_fsync_range(struct file *file, loff_t start, loff_t end, int datasync)
 {
 #ifdef CONFIG_DYNAMIC_FSYNC
-  if (!early_suspend_active)
-    return 0;
-  else {
+	if (!early_suspend_active)
+		return 0;
+	else {
 #endif
-
 	struct address_space *mapping = file->f_mapping;
 	int err, ret;
 
@@ -198,7 +201,7 @@ int vfs_fsync_range(struct file *file, loff_t start, loff_t end, int datasync)
 out:
 	return ret;
 #ifdef CONFIG_DYNAMIC_FSYNC
-  }
+	}
 #endif
 }
 EXPORT_SYMBOL(vfs_fsync_range);
@@ -233,19 +236,19 @@ static int do_fsync(unsigned int fd, int datasync)
 SYSCALL_DEFINE1(fsync, unsigned int, fd)
 {
 #ifdef CONFIG_DYNAMIC_FSYNC
-  if (!early_suspend_active)
-    return 0;
-  else
-#endif 
+	if (!early_suspend_active)
+		return 0;
+	else
+#endif
 	return do_fsync(fd, 0);
 }
 
 SYSCALL_DEFINE1(fdatasync, unsigned int, fd)
 {
 #ifdef CONFIG_DYNAMIC_FSYNC
-  if (!early_suspend_active)
-    return 0;
-  else
+	if (!early_suspend_active)
+		return 0;
+	else
 #endif
 	return do_fsync(fd, 1);
 }
@@ -318,11 +321,10 @@ SYSCALL_DEFINE(sync_file_range)(int fd, loff_t offset, loff_t nbytes,
 				unsigned int flags)
 {
 #ifdef CONFIG_DYNAMIC_FSYNC
-  if (!early_suspend_active)
-    return 0;
-  else {
+	if (!early_suspend_active)
+		return 0;
+	else {
 #endif
-
 	int ret;
 	struct file *file;
 	struct address_space *mapping;
@@ -403,7 +405,7 @@ out_put:
 out:
 	return ret;
 #ifdef CONFIG_DYNAMIC_FSYNC
-  }
+	}
 #endif
 }
 #ifdef CONFIG_HAVE_SYSCALL_WRAPPERS
@@ -422,9 +424,9 @@ SYSCALL_DEFINE(sync_file_range2)(int fd, unsigned int flags,
 				 loff_t offset, loff_t nbytes)
 {
 #ifdef CONFIG_DYNAMIC_FSYNC
-  if (!early_suspend_active)
-    return 0;
-  else
+	if (!early_suspend_active)
+		return 0;
+	else
 #endif
 	return sys_sync_file_range(fd, offset, nbytes, flags);
 }
