@@ -1,1 +1,0 @@
-cmd_drivers/w1/built-in.o :=  /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/w1/built-in.o drivers/w1/wire.o drivers/w1/masters/built-in.o drivers/w1/slaves/built-in.o 

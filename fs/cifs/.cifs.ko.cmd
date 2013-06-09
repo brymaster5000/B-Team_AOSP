@@ -1,1 +1,0 @@
-cmd_fs/cifs/cifs.ko := /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL -r  -T /home/brymaster5000/android/kernel/B-Team_AOSP/scripts/module-common.lds --build-id  -o fs/cifs/cifs.ko fs/cifs/cifs.o fs/cifs/cifs.mod.o

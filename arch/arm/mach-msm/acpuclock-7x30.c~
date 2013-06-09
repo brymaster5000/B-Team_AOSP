@@ -57,8 +57,13 @@
 #define MAX_AXI_KHZ 192000
 
 #ifdef CONFIG_CPU_FREQ_VDD_LEVELS
-#define vivow_ACPU_MIN_UV_MV 750U
-#define vivow_ACPU_MAX_UV_MV 1525U
+<<<<<<< HEAD
+#define VIVOW_ACPU_MIN_UV_MV 750U
+#define VIVOW_ACPU_MAX_UV_MV 1525U
+=======
+#define SEMC_ACPU_MIN_UV_MV 750U
+#define SEMC_ACPU_MAX_UV_MV 1450U
+>>>>>>> origin
 #endif
 
 struct clock_state {

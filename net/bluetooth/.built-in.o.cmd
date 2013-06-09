@@ -1,1 +1,0 @@
-cmd_net/bluetooth/built-in.o :=  /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o net/bluetooth/built-in.o net/bluetooth/bluetooth.o net/bluetooth/rfcomm/built-in.o net/bluetooth/bnep/built-in.o net/bluetooth/hidp/built-in.o 

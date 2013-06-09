@@ -1,1 +1,0 @@
-cmd_drivers/hid/hid.o := /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/hid/hid.o drivers/hid/hid-debug.o drivers/hid/hid-core.o drivers/hid/hid-input.o 

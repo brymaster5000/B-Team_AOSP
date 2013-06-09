@@ -1,1 +1,0 @@
-cmd_drivers/tty/serial/built-in.o :=  /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/tty/serial/built-in.o drivers/tty/serial/serial_core.o drivers/tty/serial/bcm_bt_lpm.o drivers/tty/serial/msm_serial.o drivers/tty/serial/msm_serial_hs.o drivers/tty/serial/msm_serial_hs_brcm.o drivers/tty/serial/msm_serial_hs_ti_dc.o 

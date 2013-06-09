@@ -1,1 +1,0 @@
-cmd_drivers/staging/zram/zram.o := /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/staging/zram/zram.o drivers/staging/zram/zram_drv.o drivers/staging/zram/zram_sysfs.o 

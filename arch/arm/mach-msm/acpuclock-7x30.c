@@ -58,7 +58,7 @@
 
 #ifdef CONFIG_CPU_FREQ_VDD_LEVELS
 #define VIVOW_ACPU_MIN_UV_MV 750U
-#define VIVOW_ACPU_MAX_UV_MV 1525U
+#define VIVOW_ACPU_MAX_UV_MV 1450U
 #endif
 
 struct clock_state {

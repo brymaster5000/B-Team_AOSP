@@ -1,1 +1,0 @@
-cmd_firmware/built-in.o :=  rm -f firmware/built-in.o; /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ar rcsD firmware/built-in.o

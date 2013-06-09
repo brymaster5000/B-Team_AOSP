@@ -1,1 +1,0 @@
-cmd_drivers/char/diag/diagchar.o := /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/char/diag/diagchar.o drivers/char/diag/diagchar_core.o drivers/char/diag/diagchar_hdlc.o drivers/char/diag/diagfwd.o drivers/char/diag/diagmem.o drivers/char/diag/diagfwd_cntl.o 

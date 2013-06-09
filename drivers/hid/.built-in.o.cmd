@@ -1,1 +1,0 @@
-cmd_drivers/hid/built-in.o :=  /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/hid/built-in.o drivers/hid/hid.o drivers/hid/hid-apple.o drivers/hid/usbhid/built-in.o 

@@ -1,1 +1,0 @@
-cmd_drivers/i2c/chips/built-in.o :=  /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL    -r -o drivers/i2c/chips/built-in.o drivers/i2c/chips/akm8975.o drivers/i2c/chips/bma150.o drivers/i2c/chips/cm3628.o drivers/i2c/chips/tpa2051d3.o drivers/i2c/chips/adp1650_flashlight.o drivers/i2c/chips/tps65200.o 

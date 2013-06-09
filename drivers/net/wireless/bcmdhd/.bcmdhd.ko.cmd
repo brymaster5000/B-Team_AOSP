@@ -1,1 +1,0 @@
-cmd_drivers/net/wireless/bcmdhd/bcmdhd.ko := /home/brymaster5000/android/kernel/arm-eabi-linaro-4.6.2/bin/arm-eabi-ld -EL -r  -T /home/brymaster5000/android/kernel/B-Team_AOSP/scripts/module-common.lds --build-id  -o drivers/net/wireless/bcmdhd/bcmdhd.ko drivers/net/wireless/bcmdhd/bcmdhd.o drivers/net/wireless/bcmdhd/bcmdhd.mod.o
