@@ -1335,9 +1335,12 @@ static struct kgsl_device_platform_data kgsl_3d0_pdata = {
 	.num_levels = 3,
 	.set_grp_async = set_grp3d_async,
 	.idle_timeout = HZ/20,
+<<<<<<< HEAD
 	.nap_allowed = true,
 	.idle_needed = true,
+=======
 	.nap_allowed = FALSE,
+>>>>>>> 3d33ae3... add gpu oc 2d and 3d
 	.clk_map = KGSL_CLK_SRC | KGSL_CLK_CORE |
 		KGSL_CLK_IFACE | KGSL_CLK_MEM,
 };
