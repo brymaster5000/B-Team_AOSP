@@ -12,6 +12,12 @@ config IOSCHED_NOOP
 	  that do their own scheduling and require only minimal assistance from
 	  the kernel.
 
+config IOSCHED_FIFO
+	bool
+	default y
+	---help---
+	 A no-op scheduler that really does nothing.
+
 config IOSCHED_DEADLINE
 	tristate "Deadline I/O scheduler"
 	default y
@@ -61,7 +67,12 @@ config IOSCHED_BFQ
 	---help---
 	  The BFQ I/O scheduler tries to distribute bandwidth among
 	  all processes according to their weights.
-	  It aims at distributing the bandwidth as desired, independently of
+	  It aims at distributing the bandwidth as desired, independently ofconfig IOSCHED_FIFO
+	bool
+	default y
+	---help---
+	 A no-op scheduler that really does nothing.
+
 	  the disk parameters and with any workload. It also tries to
 	  guarantee low latency to interactive and soft real-time
 	  applications.  If compiled built-in (saying Y here), BFQ can
@@ -128,7 +139,12 @@ choice
 	config DEFAULT_VR
 		bool "VR" if IOSCHED_VR=y
 
-endchoice
+	config DEFAULT_ROW
+		bool "ROW" if IOSCHED_ROW=y
+	
+	config DEFAULT_FIFO
+		bool "fifo" 
+
 
 config DEFAULT_IOSCHED
 	string
@@ -139,6 +155,8 @@ config DEFAULT_IOSCHED
 	default "sio" if DEFAULT_SIO
 	default "noop" if DEFAULT_NOOP
 	default "vr" if DEFAULT_VR
+	default "row" if DEFAULT_ROW
+	default "fifo" if DEFAULT_FIFO
 
 endmenu
 
