@@ -31,8 +31,6 @@ static const int async_write_expire = 16 * HZ;	/* ditto for async, these limits 
 
 static const int writes_starved = 2;		/* max times reads can starve a write */
 static const int fifo_batch     = 8;		/* # of sequential requests treated as one
-static const int writes_starved = 4;		/* max times reads can starve a write */
-static const int fifo_batch     = 1;		/* # of sequential requests treated as one
 						   by the above parameters. For throughput. */
 
 /* Elevator data */
