@@ -1,7 +1,16 @@
-/* This file is auto generated, version <<<<<<< HEAD 8 ======= 2 >>>>>>> 3044d32290404dfc93a6b2ddada4ec1c94848114 */
+<<<<<<< HEAD
+/* This file is auto generated, version 8 */
 /*  PREEMPT */
 #define UTS_MACHINE "arm"
-#define UTS_VERSION "#<<<<<<< HEAD 8 ======= 2 >>>>>>> 3044d32290404dfc93a6b2ddada4ec"
+#define UTS_VERSION "#8 PREEMPT Sun Jun 9 12:24:32 EDT 2013"
 #define LINUX_COMPILE_BY "bsmitty2"
 #define LINUX_COMPILE_HOST "bsmitty2-HP-Compaq-6710b-RM342UT-ABA"
-#define LINUX_COMPILER "gcc version 4.7.3 20130205 (prerelease) (crosstool-NG hg+default-67df47c6ccd0 - Linaro GCC 2013.02 - Cortex-A8) "
+=======
+/* This file is auto generated, version 2 */
+/*  PREEMPT */
+#define UTS_MACHINE "arm"
+#define UTS_VERSION "#2 PREEMPT Sun Jun 9 13:00:27 EDT 2013"
+#define LINUX_COMPILE_BY "brymaster5000"
+#define LINUX_COMPILE_HOST "bryslaptop"
+>>>>>>> 3044d32290404dfc93a6b2ddada4ec1c94848114
+#define LINUX_COMPILER "gcc version 4.6.2 20111004 (prerelease) (Linaro GCC 4.6-2011.10) "
