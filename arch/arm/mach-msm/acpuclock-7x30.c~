@@ -57,8 +57,13 @@
 #define MAX_AXI_KHZ 192000
 
 #ifdef CONFIG_CPU_FREQ_VDD_LEVELS
+<<<<<<< HEAD
+#define VIVOW_ACPU_MIN_UV_MV 750U
+#define VIVOW_ACPU_MAX_UV_MV 1525U
+=======
 #define SEMC_ACPU_MIN_UV_MV 750U
-#define SEMC_ACPU_MAX_UV_MV 1525U
+#define SEMC_ACPU_MAX_UV_MV 1450U
+>>>>>>> origin
 #endif
 
 struct clock_state {
@@ -562,9 +567,9 @@ void acpuclk_set_vdd(unsigned int khz, int vdd)
 	mutex_lock(&drv_state.lock);
 	for (i = 0; acpu_freq_tbl[i].acpu_clk_khz; i++) {
 		if (khz == 0)
-			new_vdd = min(max((acpu_freq_tbl[i].vdd_mv + vdd), SEMC_ACPU_MIN_UV_MV), SEMC_ACPU_MAX_UV_MV);
+			new_vdd = min(max((acpu_freq_tbl[i].vdd_mv + vdd), VIVOW_ACPU_MIN_UV_MV), VIVOW_ACPU_MAX_UV_MV);
 		else if (acpu_freq_tbl[i].acpu_clk_khz == khz)
-			new_vdd = min(max((unsigned int)vdd, SEMC_ACPU_MIN_UV_MV), SEMC_ACPU_MAX_UV_MV);
+			new_vdd = min(max((unsigned int)vdd, VIVOW_ACPU_MIN_UV_MV), VIVOW_ACPU_MAX_UV_MV);
 		else continue;
 
 		acpu_freq_tbl[i].vdd_mv = new_vdd;

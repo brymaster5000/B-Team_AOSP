@@ -147,6 +147,8 @@ config CPU_FREQ_DEFAULT_GOV_SMARTMAX
 	select CPU_FREQ_GOV_SMARTMAX
 	help
 	  Use the CPUFreq governor 'smartmax' as default
+<<<<<<< HEAD
+=======
 
 config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND
 bool "intellidemand"
@@ -154,6 +156,7 @@ select CPU_FREQ_GOV_INTELLIDEMAND
 select CPU_FREQ_GOV_PERFORMANCE
 help
 Intelligent OnDemand Govneror based on Samsung Patched OnDemand
+>>>>>>> origin
 
 endchoice
 
@@ -299,6 +302,15 @@ config CPU_FREQ_GOV_CONSERVATIVE
 
 	  If in doubt, say N.
 
+config CPU_FREQ_VDD_LEVELS
+  bool "CPU Vdd levels sysfs interface"
+  depends on CPU_FREQ_STAT
+  depends on ARCH_MSM7X30
+  default n
+  help
+    CPU Vdd levels sysfs interface
+
+
 config CPU_FREQ_GOV_SAVAGEDZEN
 	tristate "'savagedzen' cpufreq governor"
 	depends on CPU_FREQ
@@ -333,3 +345,6 @@ depends on X86
 source "drivers/cpufreq/Kconfig.x86"
 endmenu
 
+
+endif
+endmenu

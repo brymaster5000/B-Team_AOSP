@@ -136,4 +136,7 @@ static inline int rwsem_atomic_update(int delta, struct rw_semaphore *sem)
 
 #endif /* __KERNEL__ */
 #endif /* _ASM_ARM_RWSEM_H */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3044d32290404dfc93a6b2ddada4ec1c94848114

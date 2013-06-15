@@ -29,9 +29,14 @@ static const int sync_write_expire = 2 * HZ;	/* max time before a sync write is 
 static const int async_read_expire  =  4 * HZ;	/* ditto for async, these limits are SOFT! */
 static const int async_write_expire = 16 * HZ;	/* ditto for async, these limits are SOFT! */
 
+<<<<<<< HEAD
 static const int writes_starved = 2;		/* max times reads can starve a write */
 static const int fifo_batch     = 8;		/* # of sequential requests treated as one
 						   by the above parameters. For throughput. */
+=======
+static const int writes_starved = 4;		/* max times reads can starve a write */
+static const int fifo_batch     = 1;		/* # of sequential requests treated as one by the above parameters. For throughput. */
+>>>>>>> 3044d32290404dfc93a6b2ddada4ec1c94848114
 
 /* Elevator data */
 struct sio_data {
