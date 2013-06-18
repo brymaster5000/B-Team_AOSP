@@ -69,3 +69,5 @@ obj-$(CONFIG_LIBRA_SDIOIF)	+= libra/
 obj-$(CONFIG_WCNSS_CORE)	+= wcnss/
 
 obj-$(CONFIG_QUALCOMM_WLAN)        += qualcomm_wlan/prima/CORE/HDD/src/
+
+obj-$(CONFIG_BCM4330B2)   += bcm4330b2/
