@@ -1337,7 +1337,7 @@ static struct kgsl_device_platform_data kgsl_3d0_pdata = {
 	.idle_timeout = HZ/20,
 	.nap_allowed = true,
 	.idle_needed = true,
-	.nap_allowed = FALSE,
+	.nap_allowed = false,
 	.clk_map = KGSL_CLK_SRC | KGSL_CLK_CORE |
 		KGSL_CLK_IFACE | KGSL_CLK_MEM,
 };
@@ -1379,12 +1379,9 @@ static struct kgsl_device_platform_data kgsl_2d0_pdata = {
 	/* HW workaround, run Z180 SYNC @ 192 MHZ */
 	.set_grp_async = NULL,
 	.idle_timeout = HZ/10,
-<<<<<<< HEAD
 	.nap_allowed = true,
 	.idle_needed = true,
-=======
-	.nap_allowed = FALSE,
->>>>>>> 3d33ae3... add gpu oc 2d and 3d
+	.nap_allowed = false,
 	.clk_map = KGSL_CLK_CORE | KGSL_CLK_IFACE,
 };
 
