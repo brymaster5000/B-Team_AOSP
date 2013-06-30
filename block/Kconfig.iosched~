@@ -139,16 +139,12 @@ choice
 	config DEFAULT_VR
 		bool "VR" if IOSCHED_VR=y
 
-<<<<<<< HEAD
-=======
 	config DEFAULT_ROW
 		bool "ROW" if IOSCHED_ROW=y
 	
 	config DEFAULT_FIFO
 		bool "fifo" 
 
->>>>>>> 8dc25ec... added fifo io-sched
-endchoice
 
 config DEFAULT_IOSCHED
 	string
@@ -159,12 +155,9 @@ config DEFAULT_IOSCHED
 	default "sio" if DEFAULT_SIO
 	default "noop" if DEFAULT_NOOP
 	default "vr" if DEFAULT_VR
-<<<<<<< HEAD
-=======
 	default "row" if DEFAULT_ROW
 	default "fifo" if DEFAULT_FIFO
->>>>>>> 8dc25ec... added fifo io-sched
-
+ 
 endmenu
 
 endif
