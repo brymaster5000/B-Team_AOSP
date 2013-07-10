@@ -145,6 +145,7 @@ choice
 	config DEFAULT_FIFO
 		bool "fifo" 
 
+endchoice
 
 config DEFAULT_IOSCHED
 	string
