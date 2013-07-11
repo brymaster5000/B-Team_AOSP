@@ -311,15 +311,6 @@ config CPU_FREQ_GOV_CONSERVATIVE
 
 	  If in doubt, say N.
 
-config CPU_FREQ_VDD_LEVELS
-  bool "CPU Vdd levels sysfs interface"
-  depends on CPU_FREQ_STAT
-  depends on ARCH_MSM7X30
-  default n
-  help
-    CPU Vdd levels sysfs interface
-
-
 config CPU_FREQ_GOV_SAVAGEDZEN
 	tristate "'savagedzen' cpufreq governor"
 	depends on CPU_FREQ
@@ -331,7 +322,7 @@ config CPU_FREQ_GOV_SCARY
 	tristate "'scary' cpufreq governor"
 	depends on CPU_FREQ
 	help
-		scary - a governor for cabbages
+		'scary' - a governor for cabbages
 
 		If in doubt, say N.
 
