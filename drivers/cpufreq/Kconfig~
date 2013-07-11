@@ -161,6 +161,12 @@ config CPU_FREQ_DEFAULT_GOV_BADASS
 	help
 	Use the CPUFreq governor 'badass' as default.
 
+config CPU_FREQ_DEFAULT_GOV_HYPER
+  bool "hyper"
+  select CPU_FREQ_GOV_HYPER
+  help
+    Use the CPUFreq governor 'hyper' as default.
+ 
 endchoice
 
 config CPU_FREQ_GOV_SMARTASS2
@@ -351,6 +357,7 @@ config CPU_FREQ_GOV_BADASS
 		badass - also self explanitory
 
 		If in doubt, say N.
+
 config CPU_FREQ_GOV_BADASS_2_PHASE
   tristate "'2-phase' power-efficiency badass algorithm"
   depends on CPU_FREQ_GOV_BADASS
@@ -359,7 +366,7 @@ config CPU_FREQ_GOV_BADASS_2_PHASE
 
 config CPU_FREQ_GOV_BADASS_2_PHASE_FREQ
   int "'2-phase' badass frequency"
-  default 918000
+  default 921000
   depends on CPU_FREQ_GOV_BADASS
   depends on CPU_FREQ_GOV_BADASS_2_PHASE
 
@@ -397,6 +404,14 @@ config CPU_FREQ_GOV_BADASS_ALLOW_BYPASS
   help
   'allow_bypass' - This driver adds a bypass to the phases
 
+config CPU_FREQ_GOV_HYPER
+  tristate "'hyper' cpufreq governor"
+  depends on CPU_FREQ
+  help
+    'hyper' - a tweaked "ondemand" based smart and smooth optimized governor!
+
+    If in doubt, say Y.
+ 
 config CPU_FREQ_VDD_LEVELS
   bool "CPU Vdd levels sysfs interface"
   depends on CPU_FREQ_STAT

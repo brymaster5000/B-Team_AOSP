@@ -161,6 +161,12 @@ config CPU_FREQ_DEFAULT_GOV_BADASS
 	help
 	Use the CPUFreq governor 'badass' as default.
 
+config CPU_FREQ_DEFAULT_GOV_HYPER
+  bool "hyper"
+  select CPU_FREQ_GOV_HYPER
+  help
+    Use the CPUFreq governor 'hyper' as default.
+ 
 endchoice
 
 config CPU_FREQ_GOV_SMARTASS2
@@ -305,15 +311,6 @@ config CPU_FREQ_GOV_CONSERVATIVE
 
 	  If in doubt, say N.
 
-config CPU_FREQ_VDD_LEVELS
-  bool "CPU Vdd levels sysfs interface"
-  depends on CPU_FREQ_STAT
-  depends on ARCH_MSM7X30
-  default n
-  help
-    CPU Vdd levels sysfs interface
-
-
 config CPU_FREQ_GOV_SAVAGEDZEN
 	tristate "'savagedzen' cpufreq governor"
 	depends on CPU_FREQ
@@ -325,7 +322,7 @@ config CPU_FREQ_GOV_SCARY
 	tristate "'scary' cpufreq governor"
 	depends on CPU_FREQ
 	help
-		scary - a governor for cabbages
+		'scary' - a governor for cabbages
 
 		If in doubt, say N.
 
@@ -351,6 +348,7 @@ config CPU_FREQ_GOV_BADASS
 		badass - also self explanitory
 
 		If in doubt, say N.
+
 config CPU_FREQ_GOV_BADASS_2_PHASE
   tristate "'2-phase' power-efficiency badass algorithm"
   depends on CPU_FREQ_GOV_BADASS
@@ -397,6 +395,14 @@ config CPU_FREQ_GOV_BADASS_ALLOW_BYPASS
   help
   'allow_bypass' - This driver adds a bypass to the phases
 
+config CPU_FREQ_GOV_HYPER
+  tristate "'hyper' cpufreq governor"
+  depends on CPU_FREQ
+  help
+    'hyper' - a tweaked "ondemand" based smart and smooth optimized governor!
+
+    If in doubt, say Y.
+ 
 config CPU_FREQ_VDD_LEVELS
   bool "CPU Vdd levels sysfs interface"
   depends on CPU_FREQ_STAT
